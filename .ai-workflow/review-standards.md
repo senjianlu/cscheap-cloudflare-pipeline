@@ -200,16 +200,12 @@ plan 阶段 major 的唯一判据:**若该问题留到实现阶段才被发现,�
 
 ## 技术栈评审关注点
 
-<!-- TEMPLATE: 按需删减。 -->
-- TypeScript:类型逃逸(as any / @ts-ignore)、未处理的 Promise、状态管理一致性
-- Python/FastAPI:阻塞调用混入 async 路径、Pydantic 校验缺失、异常吞噬
-- Scrapy:阻塞调用混入 reactor/事件循环、selector 取值无防御(裸下标/
-  无 default 导致页面结构变化即崩)、pipeline/middleware 异常吞噬致
-  item 静默丢失、去重/限速/重试配置被关闭或绕过、解析测试依赖真网
-  (须用本地 fixture 响应)
-- Cloudflare Workers:未处理的 Promise(未 await / return / `ctx.waitUntil`);
-  模块级可变状态跨请求共享;无界请求 / 响应体整体缓冲(应流式);
-  `WorkerEntrypoint` 把辅助方法暴露成 RPC;密钥进日志或以普通字符串比较
-  (应先哈希再 `timingSafeEqual`);`passThroughOnException` 代替显式错误处理;
-  Cron / 后台任务超出 CPU 与时长预算而未分页推进;单元测试访问真网
+- TypeScript:类型逃逸(as any / @ts-ignore)、未处理的 Promise
+- 契约:同一结构在 `contract/` 之外另写一份;生成的 JSON Schema 与契约漂移;破坏性变更未升主版本或无迁移说明
+- 发布正确性:指针可能指向不完整版本;写入不幂等或中断后重跑产生重复 / 孤儿数据;切换不是带条件的单语句;
+  回滚或清理会删到仍被指针引用的版本;失败被吞掉却报成功
+- D1 / R2:SQL 拼接字符串而非绑定参数;单语句或绑定参数超过平台上限而未分块;整版读入内存而非流式 / 分批
+- 内容安全:AST 放行未登记的节点、组件或原始 HTML;未校验的 URL 协议;文件路径未防穿越;未限制文件体积
+- 公开仓卫生:出现账号 ID、资源 ID、令牌、内部地址,或写死某个使用方的仓库名、域名、资源名
+- 测试:单元测试访问真网;发布路径只测成功、不测中断与重入
 - 通用:plan 中测试用例是否被偷工减料(只测 happy path 即 major)

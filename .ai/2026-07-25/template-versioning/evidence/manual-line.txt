@@ -1,1 +1,0 @@
-- 需人工合并:AGENTS.md、CLAUDE.md、README.md、.agents/skills/、skills-lock.json

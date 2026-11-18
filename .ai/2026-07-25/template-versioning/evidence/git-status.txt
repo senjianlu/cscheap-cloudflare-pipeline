@@ -1,5 +1,0 @@
- M README.md
-?? .ai-workflow/TEMPLATE-VERSION
-?? .ai/2026-07-25/template-versioning/
-?? CHANGELOG.md
-?? docs/decisions/0008-template-versioning.md

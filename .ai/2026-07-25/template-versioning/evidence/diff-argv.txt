@@ -1,3 +1,0 @@
-git diff "v$OLD..v$NEW" -- .ai-workflow .claude/hooks \
-  '.claude/skills/rawf-*' .claude/settings.json .githooks .gitmessage \
-  CLAUDE.md AGENTS.md README.md .agents/skills skills-lock.json

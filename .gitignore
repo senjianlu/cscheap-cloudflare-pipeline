@@ -10,16 +10,9 @@
 .ai/**/.review-lock
 .ai/**/.plan-review-lock
 
-# Python
-__pycache__/
-*.pyc
-.venv/
-.pytest_cache/
-
 # Node
 node_modules/
 dist/
-.next/
 
 # 环境与系统
 .env

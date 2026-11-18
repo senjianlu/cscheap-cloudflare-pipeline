@@ -24,13 +24,11 @@ set -euo pipefail
 # 若纳入指纹会把这类并发写入误判为"隔离失败"致评审无效。故整目录不计入。
 # .review-lock:flock 锁文件常驻任务目录(永不删除),评审前后都在,排除只为
 # 让 git status 在评审期间保持干净。
-# TEMPLATE: 按项目构建产物增删排除项。
 hash_excludes=(
   --exclude='.review-raw-*'
   --exclude='.review-lock'
   --exclude='.claude/'
-  --exclude='__pycache__/' --exclude='*.pyc' --exclude='.pytest_cache/'
-  --exclude='.venv/' --exclude='node_modules/' --exclude='dist/' --exclude='.next/'
+  --exclude='node_modules/' --exclude='dist/' --exclude='.wrangler/'
   --exclude='.DS_Store'
 )
 workspace_hash() {
