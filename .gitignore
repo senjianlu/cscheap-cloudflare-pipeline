@@ -1,0 +1,34 @@
+# rawf:运行时状态不入库(产物入库,状态不入库)
+.ai/.current-task
+# rawf:评审异常时遗留的原始输出与原子发布临时文件
+.ai/**/.review-raw-*
+.ai/**/.review-out-*
+# rawf:plan 阶段评审的原始输出与原子发布临时文件
+.ai/**/.plan-review-raw-*
+.ai/**/.plan-review-out-*
+# rawf:评审 flock 锁文件(常驻任务目录,永不删除;锁语义见 docs/decisions/t0009)
+.ai/**/.review-lock
+.ai/**/.plan-review-lock
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+.next/
+
+# 环境与系统
+.env
+.env.*
+.DS_Store
+
+# Cloudflare Workers:本地变量(示例文件入库)、wrangler 生成的运行时类型与本地状态
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+worker-configuration.d.ts
+.wrangler/
