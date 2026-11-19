@@ -1,0 +1,81 @@
+# rawf-evidence v1
+tc: TC-04
+label: r2
+cmd: pnpm exec vitest run test/ast.test.ts --reporter=verbose
+cwd: /home/rabbir/Projects/cscheap-cloudflare-pipeline
+git_head: de3914483cbf27cf9abec40c6651e45f2d19d34b dirty
+started: 2026-11-19T13:19:09+09:00
+--- output ---
+
+ RUN  v5.1.0 /home/rabbir/Projects/cscheap-cloudflare-pipeline
+
+ ✓ test/ast.test.ts > AST:合法树 > 含 EntityCard、ref: 链接、带宽高图片、下标为 -1 的代码块 15ms
+ ✓ test/ast.test.ts > AST:合法树 > 白名单内的每个元素都能通过 4ms
+ ✓ test/ast.test.ts > AST:合法树 > img.src 的既有形式 /assets/<文件名> 仍然通过(只做加法扩展) 1ms
+ ✓ test/ast.test.ts > AST:合法树 > 站内路径不限定语言或路径前缀 1ms
+ ✓ test/ast.test.ts > AST:合法树 > 链接长度沿用既有上限 4096:3000 字符与恰好 4096 字符的合法链接通过 3ms
+ ✓ test/ast.test.ts > AST:合法树 > 恰好 64 层嵌套通过 1ms
+ ✓ test/ast.test.ts > AST:非法树 > 未登记组件 2ms
+ ✓ test/ast.test.ts > AST:非法树 > 组件属性不合法 1ms
+ ✓ test/ast.test.ts > AST:非法树 > 原始 HTML 或表达式节点 raw 1ms
+ ✓ test/ast.test.ts > AST:非法树 > 原始 HTML 或表达式节点 html 0ms
+ ✓ test/ast.test.ts > AST:非法树 > 原始 HTML 或表达式节点 mdxJsxFlowElement 0ms
+ ✓ test/ast.test.ts > AST:非法树 > 原始 HTML 或表达式节点 mdxFlowExpression 0ms
+ ✓ test/ast.test.ts > AST:非法树 > 原始 HTML 或表达式节点 mdxjsEsm 0ms
+ ✓ test/ast.test.ts > AST:非法树 > 白名单外的元素 script 0ms
+ ✓ test/ast.test.ts > AST:非法树 > 白名单外的元素 iframe 0ms
+ ✓ test/ast.test.ts > AST:非法树 > 白名单外的元素 div 0ms
+ ✓ test/ast.test.ts > AST:非法树 > 白名单外的元素 span 0ms
+ ✓ test/ast.test.ts > AST:非法树 > 白名单外的元素 h1 0ms
+ ✓ test/ast.test.ts > AST:非法树 > 白名单外的元素 style 0ms
+ ✓ test/ast.test.ts > AST:非法树 > 白名单外的元素 object 0ms
+ ✓ test/ast.test.ts > AST:非法树 > 元素带白名单外的属性 1ms
+ ✓ test/ast.test.ts > AST:非法树 > a.href 为 javascript:alert(1) 0ms
+ ✓ test/ast.test.ts > AST:非法树 > a.href 为 JAVASCRIPT:alert(1) 0ms
+ ✓ test/ast.test.ts > AST:非法树 > a.href 为 data:text/html,<script>alert(1)</script> 0ms
+ ✓ test/ast.test.ts > AST:非法树 > a.href 为 vbscript:x 0ms
+ ✓ test/ast.test.ts > AST:非法树 > a.href 为 ftp://example.com/x 0ms
+ ✓ test/ast.test.ts > AST:非法树 > a.href 为 //example.com/x 0ms
+ ✓ test/ast.test.ts > AST:非法树 > a.href 为 https://user:secret@example.com/ 0ms
+ ✓ test/ast.test.ts > AST:非法树 > a.href 为 /a\b 0ms
+ ✓ test/ast.test.ts > AST:非法树 > a.href 为 /a b 0ms
+ ✓ test/ast.test.ts > AST:非法树 > a.href 为 relative/path 0ms
+ ✓ test/ast.test.ts > AST:非法树 > a.href 为  0ms
+ ✓ test/ast.test.ts > AST:非法树 > a.href 含路径穿越 /docs/../admin 0ms
+ ✓ test/ast.test.ts > AST:非法树 > a.href 含路径穿越 /../x 0ms
+ ✓ test/ast.test.ts > AST:非法树 > a.href 含路径穿越 /a/./b 0ms
+ ✓ test/ast.test.ts > AST:非法树 > a.href 含路径穿越 /a/%2e%2e/b 0ms
+ ✓ test/ast.test.ts > AST:非法树 > a.href 含路径穿越 /a/%2E%2E 0ms
+ ✓ test/ast.test.ts > AST:非法树 > a.href 含路径穿越 /a/.. 0ms
+ ✓ test/ast.test.ts > AST:非法树 > a.href 含路径穿越 /%2e/x 0ms
+ ✓ test/ast.test.ts > AST:非法树 > ref: 引用格式错误 ref: 0ms
+ ✓ test/ast.test.ts > AST:非法树 > ref: 引用格式错误 ref:sample 0ms
+ ✓ test/ast.test.ts > AST:非法树 > ref: 引用格式错误 ref:blog.video:sample 0ms
+ ✓ test/ast.test.ts > AST:非法树 > ref: 引用格式错误 ref:blog.post: 0ms
+ ✓ test/ast.test.ts > AST:非法树 > ref: 引用格式错误 ref:blog.post:Sample 0ms
+ ✓ test/ast.test.ts > AST:非法树 > ref: 引用格式错误 ref:blog.post:../other 0ms
+ ✓ test/ast.test.ts > AST:非法树 > ref: 引用格式错误 ref:item:Example 0ms
+ ✓ test/ast.test.ts > AST:非法树 > ref: 引用格式错误 ref:item:skins/a b 0ms
+ ✓ test/ast.test.ts > AST:非法树 > ref: 引用格式错误 ref: blog.post:sample 0ms
+ ✓ test/ast.test.ts > AST:非法树 > ref: 引用格式错误 REF:blog.post:sample 0ms
+ ✓ test/ast.test.ts > AST:非法树 > 链接长度超过 4096(4097 字符) 2ms
+ ✓ test/ast.test.ts > AST:非法树 > 无 id 的标题 1ms
+ ✓ test/ast.test.ts > AST:非法树 > img 带子节点、缺 alt 或 src 不是资源引用 2ms
+ ✓ test/ast.test.ts > AST:非法树 > 嵌套 65 层 15ms
+ ✓ test/ast.test.ts > AST:非法树 > 调色板下标等于 colors 长度 2ms
+ ✓ test/ast.test.ts > AST:非法树 > 调色板超过 64 项或色值非法 1ms
+ ✓ test/ast.test.ts > AST:非法树 > 根不是 root 或带多余字段 0ms
+ ✓ test/ast.test.ts > 目录、结构化文本与页对象 > 合法页对象通过,规范序列化的键有序且无空白 4ms
+ ✓ test/ast.test.ts > 目录、结构化文本与页对象 > 目录与结构化文本的非法形状被拒 1ms
+ ✓ test/ast.test.ts > 目录、结构化文本与页对象 > 页对象带未知字段、未知类型或非法正文时被拒 2ms
+
+ Test Files  1 passed (1)
+      Tests  59 passed (59)
+   Start at  13:19:10
+   Duration  393ms (import 50%, tests 30%, transform 18%, worker 2%)
+
+
+--- end ---
+exit: 0
+finished: 2026-11-19T13:19:11+09:00
+bytes: 5050

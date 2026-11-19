@@ -1,0 +1,20 @@
+# rawf-evidence v1
+tc: TC-01
+label: r3
+cmd: pnpm run check:static
+cwd: /home/rabbir/Projects/cscheap-cloudflare-pipeline
+git_head: de3914483cbf27cf9abec40c6651e45f2d19d34b dirty
+started: 2026-11-19T13:33:16+09:00
+--- output ---
+$ pnpm lint && pnpm typecheck
+$ eslint . && prettier --check "contract/**/*.ts" "scripts/**/*.ts" "test/**/*.ts" "*.{ts,mjs}" package.json tsconfig.json
+Checking formatting...
+[warn] contract/ast.ts
+[warn] Code style issues found in the above file. Run Prettier with --write to fix.
+[ELIFECYCLE] Command failed with exit code 1.
+[ELIFECYCLE] Command failed with exit code 1.
+
+--- end ---
+exit: 1
+finished: 2026-11-19T13:33:34+09:00
+bytes: 375

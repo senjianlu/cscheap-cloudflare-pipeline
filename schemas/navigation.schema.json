@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "navigation.json(导航)",
+  "description": "内容契约 v1。由 contract/ 经 scripts/gen-schemas.ts 生成,请勿手改。",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "number",
+      "const": 1
+    },
+    "groups": {
+      "maxItems": 64,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string",
+              "pattern": "^[a-z]{2,3}(-[A-Z][a-z]{3})?(-([A-Z]{2}|[0-9]{3}))?(-([a-z0-9]{5,8}|[0-9][a-z0-9]{3}))*$"
+            },
+            "additionalProperties": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            },
+            "minProperties": 1
+          },
+          "icon": {
+            "anyOf": [
+              {
+                "type": "boolean",
+                "const": false
+              },
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 64,
+                "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "image": {
+                    "type": "string",
+                    "maxLength": 2048,
+                    "pattern": "^(?:https:\\/\\/[^\\s/].*|(?!\\.{1,2}(\\/|$))[A-Za-z0-9._-]+(\\/(?!\\.{1,2}(\\/|$))[A-Za-z0-9._-]+)*)$"
+                  },
+                  "imageDark": {
+                    "type": "string",
+                    "maxLength": 2048,
+                    "pattern": "^(?:https:\\/\\/[^\\s/].*|(?!\\.{1,2}(\\/|$))[A-Za-z0-9._-]+(\\/(?!\\.{1,2}(\\/|$))[A-Za-z0-9._-]+)*)$"
+                  },
+                  "width": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 4096
+                  },
+                  "height": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 4096
+                  }
+                },
+                "required": [
+                  "image"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          },
+          "pages": {
+            "maxItems": 500,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 400,
+              "pattern": "^(?:blog\\.post:[a-z0-9]+(?:[._-][a-z0-9]+)*|wiki\\.site:[a-z0-9]+(?:[._-][a-z0-9]+)*|wiki\\.event:[a-z0-9]+(?:[._-][a-z0-9]+)*|wiki\\.guide:[a-z0-9]+(?:[._-][a-z0-9]+)*|docs\\.page:[a-z0-9]+(?:[._-][a-z0-9]+)*|docs\\.api:[a-z0-9]+(?:[._-][a-z0-9]+)*|item:[a-z0-9]+(?:-[a-z0-9]+)*\\/(?:[A-Za-z0-9._~-]|%[0-9A-F]{2}){1,256})$"
+            }
+          }
+        },
+        "required": [
+          "title",
+          "pages"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "groups"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "type": "blog.post",
+  "id": "example-post",
+  "slug": "example-post",
+  "stage": "draft",
+  "workflow": [
+    {
+      "stage": "draft",
+      "by": "author",
+      "at": "2026-01-01T00:00:00Z",
+      "note": "Created from template."
+    }
+  ],
+  "authors": [
+    "example-author"
+  ],
+  "category": "example-category",
+  "tags": [
+    "example-tag"
+  ],
+  "seo": {
+    "ogImage": "og.png"
+  },
+  "data": {}
+}

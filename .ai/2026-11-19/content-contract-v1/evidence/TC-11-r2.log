@@ -1,0 +1,41 @@
+# rawf-evidence v1
+tc: TC-11
+label: r2
+cmd: pnpm exec vitest run test/templates.test.ts --reporter=verbose
+cwd: /home/rabbir/Projects/cscheap-cloudflare-pipeline
+git_head: de3914483cbf27cf9abec40c6651e45f2d19d34b dirty
+started: 2026-11-19T13:19:20+09:00
+--- output ---
+
+ RUN  v5.1.0 /home/rabbir/Projects/cscheap-cloudflare-pipeline
+
+ ✓ test/templates.test.ts > 模板与注册表一一对应 > 每个 source: git 的类型都有模板,且没有多余的目录 4ms
+ ✓ test/templates.test.ts > 模板与注册表一一对应 > 同步类型没有模板 2ms
+ ✓ test/templates.test.ts > templates/blog.post > item.json 通过契约(带示例站点上下文与只校验格式两种) 16ms
+ ✓ test/templates.test.ts > templates/blog.post > 只含 item.json 与一份示例语言的主稿 1ms
+ ✓ test/templates.test.ts > templates/blog.post > 主稿的 frontmatter 与语言文件规则通过契约 4ms
+ ✓ test/templates.test.ts > templates/wiki.site > item.json 通过契约(带示例站点上下文与只校验格式两种) 17ms
+ ✓ test/templates.test.ts > templates/wiki.site > 只含 item.json 与一份示例语言的主稿 0ms
+ ✓ test/templates.test.ts > templates/wiki.site > 主稿的 frontmatter 与语言文件规则通过契约 2ms
+ ✓ test/templates.test.ts > templates/wiki.event > item.json 通过契约(带示例站点上下文与只校验格式两种) 14ms
+ ✓ test/templates.test.ts > templates/wiki.event > 只含 item.json 与一份示例语言的主稿 1ms
+ ✓ test/templates.test.ts > templates/wiki.event > 主稿的 frontmatter 与语言文件规则通过契约 2ms
+ ✓ test/templates.test.ts > templates/wiki.guide > item.json 通过契约(带示例站点上下文与只校验格式两种) 17ms
+ ✓ test/templates.test.ts > templates/wiki.guide > 只含 item.json 与一份示例语言的主稿 0ms
+ ✓ test/templates.test.ts > templates/wiki.guide > 主稿的 frontmatter 与语言文件规则通过契约 3ms
+ ✓ test/templates.test.ts > templates/docs.page > item.json 通过契约(带示例站点上下文与只校验格式两种) 7ms
+ ✓ test/templates.test.ts > templates/docs.page > 只含 item.json 与一份示例语言的主稿 0ms
+ ✓ test/templates.test.ts > templates/docs.page > 主稿的 frontmatter 与语言文件规则通过契约 2ms
+ ✓ test/templates.test.ts > templates/docs.api > item.json 通过契约(带示例站点上下文与只校验格式两种) 12ms
+ ✓ test/templates.test.ts > templates/docs.api > generated 类型的模板只有 item.json 4ms
+
+ Test Files  1 passed (1)
+      Tests  19 passed (19)
+   Start at  13:19:21
+   Duration  437ms (import 47%, tests 38%, transform 12%, worker 2%)
+
+
+--- end ---
+exit: 0
+finished: 2026-11-19T13:19:21+09:00
+bytes: 2398

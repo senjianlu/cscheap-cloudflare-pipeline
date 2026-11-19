@@ -1,0 +1,58 @@
+{
+  "sourceCommit": "7040c14587c82e2d4241af2ab6ac975faaf56946",
+  "sourceContract": "既有文档仓契约 v3 的页对象(字段 body、toc、structuredData)",
+  "note": "样本为已公开发布的文档页;文件名是原始字节的 sha256,未做任何改写。既有产物中没有 img 节点,img 的形状以 existing-ast-contract.ts 为准。",
+  "coverage": [
+    "p",
+    "strong",
+    "code",
+    "a",
+    "blockquote",
+    "ul",
+    "ol",
+    "li",
+    "h2",
+    "h3",
+    "table",
+    "thead",
+    "tbody",
+    "tr",
+    "th",
+    "td",
+    "codeBlock",
+    "Callout:info",
+    "Callout:warning"
+  ],
+  "samples": [
+    {
+      "file": "aa3340c4c9a8dc6dae3f5456012084f8c9ce72058500b7b0e8d90f6a40cc9c40.json",
+      "locale": "zh-CN",
+      "slug": "dashboard/market-fees",
+      "bytes": 17380
+    },
+    {
+      "file": "873641f85d7803c15583a8ebb3e390f90fd1ac8d116c3a66ba4ba3039d2abc23.json",
+      "locale": "zh-CN",
+      "slug": "api/authentication",
+      "bytes": 6475
+    },
+    {
+      "file": "58866f6a17c0f1e8e53070dca0282ef71348df3b036db3d2ebf68242308722ca.json",
+      "locale": "zh-CN",
+      "slug": "api/reference/markets/list-markets",
+      "bytes": 27731
+    },
+    {
+      "file": "ed6e22cd743f80839f078aada1a57207bfaddf5e2c4060cc62585c07949c84cc.json",
+      "locale": "ru",
+      "slug": "billing/credits",
+      "bytes": 6987
+    },
+    {
+      "file": "60c95543c52f7701f0661cd256812c15c0856abbd9f61ef38376fb1b05a6a7ae.json",
+      "locale": "en",
+      "slug": "api/authentication",
+      "bytes": 6968
+    }
+  ]
+}

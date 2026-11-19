@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "type": "wiki.site",
+  "id": "example-site",
+  "slug": "example-site",
+  "stage": "draft",
+  "workflow": [
+    {
+      "stage": "draft",
+      "by": "author",
+      "at": "2026-01-01T00:00:00Z",
+      "note": "Created from template."
+    }
+  ],
+  "category": "example-category",
+  "data": {
+    "name": "Example Site",
+    "url": "https://example.com/",
+    "code": "example-site"
+  }
+}

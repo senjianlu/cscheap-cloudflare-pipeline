@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "type": "wiki.event",
+  "id": "example-event",
+  "slug": "example-event",
+  "stage": "draft",
+  "workflow": [
+    {
+      "stage": "draft",
+      "by": "author",
+      "at": "2026-01-01T00:00:00Z",
+      "note": "Created from template."
+    }
+  ],
+  "sources": [
+    {
+      "kind": "url",
+      "url": "https://example.com/announcement"
+    }
+  ],
+  "data": {
+    "eventKind": "example-kind",
+    "startDate": "2026-01-01"
+  }
+}

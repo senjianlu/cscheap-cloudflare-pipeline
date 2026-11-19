@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "taxonomy/<vocabulary>.json(受控词表)",
+  "description": "内容契约 v1。由 contract/ 经 scripts/gen-schemas.ts 生成,请勿手改。",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "number",
+          "const": 1
+        },
+        "vocabulary": {
+          "type": "string",
+          "const": "authors"
+        },
+        "terms": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "maxLength": 64,
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "labels": {
+                "type": "object",
+                "propertyNames": {
+                  "type": "string",
+                  "pattern": "^[a-z]{2,3}(-[A-Z][a-z]{3})?(-([A-Z]{2}|[0-9]{3}))?(-([a-z0-9]{5,8}|[0-9][a-z0-9]{3}))*$"
+                },
+                "additionalProperties": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120
+                },
+                "minProperties": 1
+              },
+              "url": {
+                "type": "string",
+                "maxLength": 2048,
+                "pattern": "^https?:\\/\\/[^\\s/]"
+              }
+            },
+            "required": [
+              "labels"
+            ],
+            "additionalProperties": false
+          },
+          "maxProperties": 5000
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "vocabulary",
+        "terms"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "number",
+          "const": 1
+        },
+        "vocabulary": {
+          "type": "string",
+          "const": "categories"
+        },
+        "terms": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "maxLength": 64,
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "labels": {
+                "type": "object",
+                "propertyNames": {
+                  "type": "string",
+                  "pattern": "^[a-z]{2,3}(-[A-Z][a-z]{3})?(-([A-Z]{2}|[0-9]{3}))?(-([a-z0-9]{5,8}|[0-9][a-z0-9]{3}))*$"
+                },
+                "additionalProperties": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120
+                },
+                "minProperties": 1
+              }
+            },
+            "required": [
+              "labels"
+            ],
+            "additionalProperties": false
+          },
+          "maxProperties": 5000
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "vocabulary",
+        "terms"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "number",
+          "const": 1
+        },
+        "vocabulary": {
+          "type": "string",
+          "const": "tags"
+        },
+        "terms": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "maxLength": 64,
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "labels": {
+                "type": "object",
+                "propertyNames": {
+                  "type": "string",
+                  "pattern": "^[a-z]{2,3}(-[A-Z][a-z]{3})?(-([A-Z]{2}|[0-9]{3}))?(-([a-z0-9]{5,8}|[0-9][a-z0-9]{3}))*$"
+                },
+                "additionalProperties": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120
+                },
+                "minProperties": 1
+              }
+            },
+            "required": [
+              "labels"
+            ],
+            "additionalProperties": false
+          },
+          "maxProperties": 5000
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "vocabulary",
+        "terms"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

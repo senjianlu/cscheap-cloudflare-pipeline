@@ -1,0 +1,3 @@
+# 只放安装脚本白名单:允许运行安装脚本的依赖(其余一律不运行)
+allowBuilds:
+  workerd: true

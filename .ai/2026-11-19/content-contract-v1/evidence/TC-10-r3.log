@@ -1,0 +1,21 @@
+# rawf-evidence v1
+tc: TC-10
+label: r3
+cmd: bash scripts/check-schemas.sh
+cwd: /home/rabbir/Projects/cscheap-cloudflare-pipeline
+git_head: de3914483cbf27cf9abec40c6651e45f2d19d34b dirty
+started: 2026-11-19T13:33:50+09:00
+--- output ---
+== 漂移检查:schemas/ 对比重新生成的 11 个文件 ==
+无漂移
+== 自检:三种人为漂移必须被发现 ==
+自检:完全相同 → 无差异
+自检:人为漂移 missing(只在 generated 中存在：blog.post.schema.json)→ 已发现
+自检:人为漂移 extra(只在 case-extra 中存在：unexpected.schema.json)→ 已发现
+自检:人为漂移 changed(diff -r -- case-changed/blog.post.schema.json generated/blog.post.schema.json)→ 已发现
+通过:无漂移且自检通过
+
+--- end ---
+exit: 0
+finished: 2026-11-19T13:33:51+09:00
+bytes: 492

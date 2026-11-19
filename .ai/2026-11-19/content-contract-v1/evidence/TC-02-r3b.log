@@ -1,0 +1,116 @@
+# rawf-evidence v1
+tc: TC-02
+label: r3b
+cmd: pnpm exec vitest run test/envelope.test.ts --reporter=verbose
+cwd: /home/rabbir/Projects/cscheap-cloudflare-pipeline
+git_head: de3914483cbf27cf9abec40c6651e45f2d19d34b dirty
+started: 2026-11-19T13:35:49+09:00
+--- output ---
+
+ RUN  v5.1.0 /home/rabbir/Projects/cscheap-cloudflare-pipeline
+
+ ✓ test/envelope.test.ts > 信封:每个 Git 类型一份合法样本 > blog.post 通过 22ms
+ ✓ test/envelope.test.ts > 信封:每个 Git 类型一份合法样本 > wiki.site 通过 13ms
+ ✓ test/envelope.test.ts > 信封:每个 Git 类型一份合法样本 > wiki.event 通过 12ms
+ ✓ test/envelope.test.ts > 信封:每个 Git 类型一份合法样本 > wiki.guide 通过 4ms
+ ✓ test/envelope.test.ts > 信封:每个 Git 类型一份合法样本 > docs.page 通过 5ms
+ ✓ test/envelope.test.ts > 信封:每个 Git 类型一份合法样本 > docs.api 通过 6ms
+ ✓ test/envelope.test.ts > 信封:每个 Git 类型一份合法样本 > 注册表里的每个 Git 类型都有样本 0ms
+ ✓ test/envelope.test.ts > 信封:正反例 > blog.post 最小合法样本 1ms
+ ✓ test/envelope.test.ts > 信封:正反例 > wiki.site 最小合法样本 1ms
+ ✓ test/envelope.test.ts > 信封:正反例 > wiki.event 最小合法样本 1ms
+ ✓ test/envelope.test.ts > 信封:正反例 > wiki.guide 最小合法样本 0ms
+ ✓ test/envelope.test.ts > 信封:正反例 > docs.page 最小合法样本 0ms
+ ✓ test/envelope.test.ts > 信封:正反例 > docs.api 最小合法样本 0ms
+ ✓ test/envelope.test.ts > 信封:正反例 > 带全部可选字段 3ms
+ ✓ test/envelope.test.ts > 信封:正反例 > 带全部可选字段(wiki.site) 2ms
+ ✓ test/envelope.test.ts > 信封:正反例 > 缺必填 schemaVersion 2ms
+ ✓ test/envelope.test.ts > 信封:正反例 > 缺必填 type 1ms
+ ✓ test/envelope.test.ts > 信封:正反例 > 缺必填 id 1ms
+ ✓ test/envelope.test.ts > 信封:正反例 > 缺必填 slug 2ms
+ ✓ test/envelope.test.ts > 信封:正反例 > 缺必填 stage 1ms
+ ✓ test/envelope.test.ts > 信封:正反例 > 缺必填 workflow 1ms
+ ✓ test/envelope.test.ts > 信封:正反例 > 缺必填 data 1ms
+ ✓ test/envelope.test.ts > 信封:正反例 > 顶层未知字段 1ms
+ ✓ test/envelope.test.ts > 信封:正反例 > seo 内未知字段 1ms
+ ✓ test/envelope.test.ts > 信封:正反例 > workflow 项内未知字段 1ms
+ ✓ test/envelope.test.ts > 信封:正反例 > workflow 为空 1ms
+ ✓ test/envelope.test.ts > 信封:正反例 > workflow 时间倒退 1ms
+ ✓ test/envelope.test.ts > 信封:正反例 > workflow 末项 stage 与顶层不符 0ms
+ ✓ test/envelope.test.ts > 信封:正反例 > 非 UTC 时间(带时区偏移) 0ms
+ ✓ test/envelope.test.ts > 信封:正反例 > 时间缺少时区 0ms
+ ✓ test/envelope.test.ts > 信封:正反例 > 日历上不存在的日期 0ms
+ ✓ test/envelope.test.ts > 信封:正反例 > schemaVersion 不等于契约版本 0ms
+ ✓ test/envelope.test.ts > 信封:正反例 > 未知 stage 0ms
+ ✓ test/envelope.test.ts > 信封:正反例 > slug 含大写 0ms
+ ✓ test/envelope.test.ts > 信封:正反例 > id 含路径分隔符 0ms
+ ✓ test/envelope.test.ts > 信封:正反例 > refs 的 target 不是全局引用 0ms
+ ✓ test/envelope.test.ts > 信封:正反例 > refs 的 rel 不在取值内 1ms
+ ✓ test/envelope.test.ts > 信封:正反例 > sources 的 url 协议非法 0ms
+ ✓ test/envelope.test.ts > 信封:正反例 > tags 重复 9ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > UTC 时间 2026-01-01T00:00:00Z 通过 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > UTC 时间 2026-12-31T23:59:59.123Z 通过 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 非 UTC 或非法时间 2026-01-01T08:00:00+08:00 被拒 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 非 UTC 或非法时间 2026-01-01T00:00:00-00:00 被拒 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 非 UTC 或非法时间 2026-01-01T00:00:00 被拒 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 非 UTC 或非法时间 2026-01-01 00:00:00Z 被拒 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 非 UTC 或非法时间 2026-01-01t00:00:00z 被拒 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 非 UTC 或非法时间 2026-13-01T00:00:00Z 被拒 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 非 UTC 或非法时间 2026-02-30T00:00:00Z 被拒 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 非 UTC 或非法时间 2026-01-01 被拒 1ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 语言标签 en 通过 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 语言标签 fr 通过 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 语言标签 fr-CA 通过 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 语言标签 es-419 通过 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 语言标签 sr-Latn-RS 通过 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 非法语言标签 EN 被拒 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 非法语言标签 en_US 被拒 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 非法语言标签 en-us 被拒 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 非法语言标签 english 被拒 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 非法语言标签 e 被拒 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 非法语言标签  被拒 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 非法语言标签 en- 被拒 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 非法语言标签 en--US 被拒 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 非法语言标签 ../en 被拒 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > workflow 时间相等或小数位数不同不算倒退 4ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > workflow 九位小数内的倒退被拒,错误指向倒退的那一项 3ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > workflow 同一毫秒内的倒退(第四位小数)被拒,错误指向倒退的那一项 1ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > workflow 同一毫秒内的倒退(第九位小数)被拒,错误指向倒退的那一项 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > workflow 不同小数位数之间的倒退被拒,错误指向倒退的那一项 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > workflow 有小数退回到无小数被拒,错误指向倒退的那一项 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > workflow 中间一项倒退后再前进被拒,错误指向倒退的那一项 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > workflow 同一时刻的不同写法通过 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > workflow 同一时刻的不同写法(带小数)通过 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > workflow 同一毫秒内前进通过 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > workflow 无小数到有小数通过 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > 时间比较与规范化按九位小数的完整精度 0ms
+ ✓ test/envelope.test.ts > 时间与语言标签 > publishedAt 缺省时取首次进入 published 的时间 0ms
+ ✓ test/envelope.test.ts > frontmatter:主稿与译文 > frontmatter:缺 title 2ms
+ ✓ test/envelope.test.ts > frontmatter:主稿与译文 > frontmatter:缺 description 0ms
+ ✓ test/envelope.test.ts > frontmatter:主稿与译文 > frontmatter:未知字段 1ms
+ ✓ test/envelope.test.ts > frontmatter:主稿与译文 > frontmatter:sourceDigest 不是 sha256 0ms
+ ✓ test/envelope.test.ts > frontmatter:主稿与译文 > 主稿不带 sourceDigest 通过,译文带 sourceDigest 通过 0ms
+ ✓ test/envelope.test.ts > frontmatter:主稿与译文 > 译文缺 sourceDigest 被拒,错误指向 sourceDigest 0ms
+ ✓ test/envelope.test.ts > frontmatter:主稿与译文 > 主稿带 sourceDigest 被拒,错误指向 sourceDigest 0ms
+ ✓ test/envelope.test.ts > frontmatter:主稿与译文 > l10n 按类型声明的结构校验:首版没有类型声明键,任何键都被拒 11ms
+ ✓ test/envelope.test.ts > frontmatter:主稿与译文 > 不带角色时 sourceDigest 可有可无(生成 JSON Schema 用) 4ms
+ ✓ test/envelope.test.ts > 语言文件规则 > optional 类型的主稿只有 frontmatter:合法,映射为 object_sha256 为空的译文行 6ms
+ ✓ test/envelope.test.ts > 语言文件规则 > optional 类型的正文只有空白也算空,仍然合法 4ms
+ ✓ test/envelope.test.ts > 语言文件规则 > 只有主稿、没有译文:合法,只产生一行 3ms
+ ✓ test/envelope.test.ts > 语言文件规则 > 主稿加译文:合法,两行 1ms
+ ✓ test/envelope.test.ts > 语言文件规则 > 缺主稿:非法,错误指向 defaultLocale 1ms
+ ✓ test/envelope.test.ts > 语言文件规则 > required 类型正文为空:非法,错误指向该语言的 body 2ms
+ ✓ test/envelope.test.ts > 语言文件规则 > 译文文件缺 sourceDigest、主稿文件带 sourceDigest:非法,错误指向对应字段 3ms
+ ✓ test/envelope.test.ts > 语言文件规则 > 语言不在 site.locales 或语言标签非法:非法 1ms
+ ✓ test/envelope.test.ts > 语言文件规则 > generated 类型不得带正文文件 0ms
+
+ Test Files  1 passed (1)
+      Tests  94 passed (94)
+   Start at  13:35:50
+   Duration  789ms (transform 49%, tests 26%, import 24%, worker 1%)
+
+
+--- end ---
+exit: 0
+finished: 2026-11-19T13:35:51+09:00
+bytes: 9181

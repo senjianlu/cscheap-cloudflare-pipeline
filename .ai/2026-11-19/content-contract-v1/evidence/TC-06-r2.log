@@ -1,0 +1,52 @@
+# rawf-evidence v1
+tc: TC-06
+label: r2
+cmd: pnpm exec vitest run test/icon.test.ts --reporter=verbose
+cwd: /home/rabbir/Projects/cscheap-cloudflare-pipeline
+git_head: de3914483cbf27cf9abec40c6651e45f2d19d34b dirty
+started: 2026-11-19T13:19:13+09:00
+--- output ---
+
+ RUN  v5.1.0 /home/rabbir/Projects/cscheap-cloudflare-pipeline
+
+ ✓ test/icon.test.ts > 图标:合法形态 > 不写 = 类型默认 9ms
+ ✓ test/icon.test.ts > 图标:合法形态 > false = 不显示,与「未配置」可区分 5ms
+ ✓ test/icon.test.ts > 图标:合法形态 > 图标名 rocket(不设受控清单,只校验格式) 2ms
+ ✓ test/icon.test.ts > 图标:合法形态 > 图标名 a-arrow-down(不设受控清单,只校验格式) 2ms
+ ✓ test/icon.test.ts > 图标:合法形态 > 图标名 clock-3(不设受控清单,只校验格式) 4ms
+ ✓ test/icon.test.ts > 图标:合法形态 > 图标名 file-json-2(不设受控清单,只校验格式) 2ms
+ ✓ test/icon.test.ts > 图标:合法形态 > {image} 相对路径 3ms
+ ✓ test/icon.test.ts > 图标:合法形态 > {image, imageDark} 4ms
+ ✓ test/icon.test.ts > 图标:合法形态 > 白名单域名的 https 地址带宽高 5ms
+ ✓ test/icon.test.ts > 图标:非法形态 > true 被拒 2ms
+ ✓ test/icon.test.ts > 图标:非法形态 > 空串 被拒 1ms
+ ✓ test/icon.test.ts > 图标:非法形态 > 含大写的名字 被拒 0ms
+ ✓ test/icon.test.ts > 图标:非法形态 > 含空格的名字 被拒 0ms
+ ✓ test/icon.test.ts > 图标:非法形态 > 下划线写法 被拒 0ms
+ ✓ test/icon.test.ts > 图标:非法形态 > 数字 被拒 0ms
+ ✓ test/icon.test.ts > 图标:非法形态 > null 被拒 0ms
+ ✓ test/icon.test.ts > 图标:非法形态 > 空对象 被拒 0ms
+ ✓ test/icon.test.ts > 图标:非法形态 > 对象带未知字段 被拒 1ms
+ ✓ test/icon.test.ts > 图标:非法形态 > 相对路径含 .. 被拒 0ms
+ ✓ test/icon.test.ts > 图标:非法形态 > 相对路径中段含 .. 被拒 0ms
+ ✓ test/icon.test.ts > 图标:非法形态 > 绝对文件路径 被拒 0ms
+ ✓ test/icon.test.ts > 图标:非法形态 > http 地址 被拒 0ms
+ ✓ test/icon.test.ts > 图标:非法形态 > 域名不在 assetHosts 被拒 1ms
+ ✓ test/icon.test.ts > 图标:非法形态 > 绝对地址缺宽高 被拒 0ms
+ ✓ test/icon.test.ts > 图标:非法形态 > 绝对地址只缺高 被拒 0ms
+ ✓ test/icon.test.ts > 图标:非法形态 > imageDark 为绝对地址但缺宽高 被拒 0ms
+ ✓ test/icon.test.ts > 图标:非法形态 > imageDark 域名不在 assetHosts 被拒 0ms
+ ✓ test/icon.test.ts > 图标:非法形态 > 宽度为 0 被拒 0ms
+ ✓ test/icon.test.ts > 图标:非法形态 > 带账号口令的地址 被拒 0ms
+ ✓ test/icon.test.ts > 图标:非法形态 > assetHosts 为空时任何绝对地址都被拒 10ms
+
+ Test Files  1 passed (1)
+      Tests  30 passed (30)
+   Start at  13:19:14
+   Duration  381ms (import 56%, tests 25%, transform 16%, worker 3%)
+
+
+--- end ---
+exit: 0
+finished: 2026-11-19T13:19:14+09:00
+bytes: 2666

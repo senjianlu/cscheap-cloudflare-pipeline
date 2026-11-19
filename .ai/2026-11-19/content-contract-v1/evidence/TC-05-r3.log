@@ -1,0 +1,104 @@
+# rawf-evidence v1
+tc: TC-05
+label: r3
+cmd: pnpm exec vitest run test/ast-baseline.test.ts --reporter=verbose
+cwd: /home/rabbir/Projects/cscheap-cloudflare-pipeline
+git_head: de3914483cbf27cf9abec40c6651e45f2d19d34b dirty
+started: 2026-11-19T13:33:40+09:00
+--- output ---
+
+ RUN  v5.1.0 /home/rabbir/Projects/cscheap-cloudflare-pipeline
+
+ ✓ test/ast-baseline.test.ts > AST 兼容基线 > 样本目录里恰好是清单列出的 5 个文件 3ms
+ ✓ test/ast-baseline.test.ts > AST 兼容基线 > aa3340c4c9a8dc6dae3f5456012084f8c9ce72058500b7b0e8d90f6a40cc9c40:字节的 sha256 等于文件名,且与任务目录里的原件一致 1ms
+ ✓ test/ast-baseline.test.ts > AST 兼容基线 > 873641f85d7803c15583a8ebb3e390f90fd1ac8d116c3a66ba4ba3039d2abc23:字节的 sha256 等于文件名,且与任务目录里的原件一致 0ms
+ ✓ test/ast-baseline.test.ts > AST 兼容基线 > 58866f6a17c0f1e8e53070dca0282ef71348df3b036db3d2ebf68242308722ca:字节的 sha256 等于文件名,且与任务目录里的原件一致 1ms
+ ✓ test/ast-baseline.test.ts > AST 兼容基线 > ed6e22cd743f80839f078aada1a57207bfaddf5e2c4060cc62585c07949c84cc:字节的 sha256 等于文件名,且与任务目录里的原件一致 0ms
+ ✓ test/ast-baseline.test.ts > AST 兼容基线 > 60c95543c52f7701f0661cd256812c15c0856abbd9f61ef38376fb1b05a6a7ae:字节的 sha256 等于文件名,且与任务目录里的原件一致 0ms
+ ✓ test/ast-baseline.test.ts > AST 兼容基线 > aa3340c4c9a8dc6dae3f5456012084f8c9ce72058500b7b0e8d90f6a40cc9c40:body、toc、structuredData 不经改写通过新契约 20ms
+ ✓ test/ast-baseline.test.ts > AST 兼容基线 > 873641f85d7803c15583a8ebb3e390f90fd1ac8d116c3a66ba4ba3039d2abc23:body、toc、structuredData 不经改写通过新契约 11ms
+ ✓ test/ast-baseline.test.ts > AST 兼容基线 > 58866f6a17c0f1e8e53070dca0282ef71348df3b036db3d2ebf68242308722ca:body、toc、structuredData 不经改写通过新契约 11ms
+ ✓ test/ast-baseline.test.ts > AST 兼容基线 > ed6e22cd743f80839f078aada1a57207bfaddf5e2c4060cc62585c07949c84cc:body、toc、structuredData 不经改写通过新契约 2ms
+ ✓ test/ast-baseline.test.ts > AST 兼容基线 > 60c95543c52f7701f0661cd256812c15c0856abbd9f61ef38376fb1b05a6a7ae:body、toc、structuredData 不经改写通过新契约 2ms
+ ✓ test/ast-baseline.test.ts > AST 兼容基线 > 样本覆盖清单声明的节点 2ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:空的根 26ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:一万个子节点 120ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:恰好 64 层嵌套 9ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:文本:空串、超长、含控制字符 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 p:不带 properties 3ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 strong:不带 properties 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 em:不带 properties 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 del:不带 properties 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 blockquote:不带 properties 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 ul:不带 properties 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 li:不带 properties 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 hr:不带 properties 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 br:不带 properties 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 table:不带 properties 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 thead:不带 properties 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 tbody:不带 properties 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 tr:不带 properties 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 code:不带 properties 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 p:properties 为空对象 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 strong:properties 为空对象 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 em:properties 为空对象 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 del:properties 为空对象 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 blockquote:properties 为空对象 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 ul:properties 为空对象 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 li:properties 为空对象 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 hr:properties 为空对象 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 br:properties 为空对象 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 table:properties 为空对象 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 thead:properties 为空对象 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 tbody:properties 为空对象 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 tr:properties 为空对象 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:普通元素 code:properties 为空对象 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:properties 显式为 undefined 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:ol:不带 properties、空对象、start = 1 2ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:ol:start 为很大的整数 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:标题 h2:id 为 1 个与 200 个字符 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:标题 h3:id 为 1 个与 200 个字符 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:标题 h4:id 为 1 个与 200 个字符 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:标题 h5:id 为 1 个与 200 个字符 3ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:标题 h6:id 为 1 个与 200 个字符 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:标题 id:标点与非 ASCII 字符 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:链接:锚点(id 200 个字符) 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:链接:外链 http / https / mailto 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:链接:恰好 4096 个字符的外链 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:链接:既有的站内路径形式 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:链接:资源路径 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:链接:title 可省略、可为空、可超长 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:图片:最短的既有资源路径 2ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:图片:带 title 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:图片:资源路径 2049 个字符(超过 2048) 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:图片:资源路径 4097 个与十万个字符 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:图片:文件名含点、下划线、短横线、以点开头 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:图片:alt 超长 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:表格单元格:不带 properties、空对象、三种对齐 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:代码块:lang 为 1 个与 32 个字符、含 + # - 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:代码块:title 可省略、可为空、可超长 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:代码块:调色板为空且没有着色 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:代码块:调色板恰好 64 项,下标取 -1、0、63 3ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:代码块:八位与大小写混合的色值 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:代码块:一万行、单行一千个片段、超长文本 97ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 正文:Callout:info / warning,带与不带 title,带子节点 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 目录:空目录 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 目录:depth 取 2 与 6 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 目录:title 为空、url 只有 #、url 超长 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 目录:一万项 45ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 结构化文本:两个数组都为空 1ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 结构化文本:heading 可省略;id 为 1 个与 200 个字符 0ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 结构化文本:一万项 44ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 五个基线样本同样被基线定义接受(确认加载的就是那份定义) 15ms
+ ✓ test/ast-baseline.test.ts > AST 与基线定义的差分:基线接受的既有形式,新契约一律接受 > 基线拒绝的边界,新契约没有因此放宽到基线之外的既有形式上(抽查) 8ms
+
+ Test Files  1 passed (1)
+      Tests  82 passed (82)
+   Start at  13:33:41
+   Duration  851ms (tests 71%, import 21%, transform 7%, worker 1%)
+
+
+--- end ---
+exit: 0
+finished: 2026-11-19T13:33:42+09:00
+bytes: 13718

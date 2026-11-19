@@ -1,0 +1,110 @@
+# rawf-evidence v1
+tc: TC-09
+label: r3b
+cmd: pnpm exec vitest run test/schemas-semantics.test.ts --reporter=verbose
+cwd: /home/rabbir/Projects/cscheap-cloudflare-pipeline
+git_head: de3914483cbf27cf9abec40c6651e45f2d19d34b dirty
+started: 2026-11-19T13:36:03+09:00
+--- output ---
+
+ RUN  v5.1.0 /home/rabbir/Projects/cscheap-cloudflare-pipeline
+
+ ✓ test/schemas-semantics.test.ts > 生成物与来源一一对应 > schemas/ 下的文件集合等于来源集合 4ms
+ ✓ test/schemas-semantics.test.ts > 生成物与来源一一对应 > 每份 Schema 都能被独立校验器以严格模式编译 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 样本覆盖 TC-02、TC-03、TC-08 的结构性正反例 2ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > blog.post 最小合法样本 11ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > wiki.site 最小合法样本 13ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > wiki.event 最小合法样本 7ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > wiki.guide 最小合法样本 5ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > docs.page 最小合法样本 6ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > docs.api 最小合法样本 6ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 带全部可选字段 5ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 带全部可选字段(wiki.site) 3ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 缺必填 schemaVersion 2ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 缺必填 type 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 缺必填 id 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 缺必填 slug 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 缺必填 stage 0ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 缺必填 workflow 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 缺必填 data 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 顶层未知字段 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > seo 内未知字段 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > workflow 项内未知字段 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > workflow 为空 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 非 UTC 时间(带时区偏移) 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 时间缺少时区 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > schemaVersion 不等于契约版本 0ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 未知 stage 0ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > slug 含大写 0ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > id 含路径分隔符 0ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > refs 的 target 不是全局引用 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > refs 的 rel 不在取值内 0ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > sources 的 url 协议非法 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > tags 重复 0ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > blog.post 缺 authors 0ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > blog.post 的 authors 为空数组 0ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > blog.post 缺 seo 0ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > blog.post 缺 seo.ogImage 0ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > blog.post 带 authors 与 seo.ogImage 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 其他类型不要求 authors 与 seo 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > wiki.event 缺 startDate 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > wiki.event 带 startDate 与可选字段 2ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > wiki.site 的 url 为 javascript: 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > wiki.site 的 url 为 https 2ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > wiki.site 缺 code 2ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > wiki.site 的 data 含未知字段 3ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 未注册的 type 0ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 同步类型不能作为 item.json 的 type 0ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > docs.page 的 kind 不在取值内 0ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > docs.api 的 spec 指向 site.specs 中存在的键 0ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > docs.api 缺 spec 0ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > docs.api 缺 operationId 0ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > site.specs 的描述路径含 .. 3ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > site.specs 的描述路径为绝对路径 3ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > site.specs 的描述路径为仓内相对路径 2ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 词表:authors(项可带 url) 4ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 词表:tags 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 词表:标签为空对象 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 词表:未知 vocabulary 0ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 词表:非 authors 的项不得带 url 0ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 词表:标签的语言标签不合法 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 重定向:合法 6ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 重定向:非法状态码 4ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 重定向:from 不是站内路径 7ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 重定向:to 为协议相对地址 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 导航:分组带四种图标形态 7ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 导航:pages 不是全局引用格式 2ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 导航:pages 的类型未登记 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > 导航:缺 title 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > frontmatter:只有必填 6ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > frontmatter:带全部可选字段 2ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > frontmatter:缺 title 2ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > frontmatter:缺 description 1ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > frontmatter:未知字段 2ms
+ ✓ test/schemas-semantics.test.ts > 结构性样本:JSON Schema 与 Zod 结论一致 > frontmatter:sourceDigest 不是 sha256 3ms
+ ✓ test/schemas-semantics.test.ts > 提升必填进了每类型的 JSON Schema > blog.post:required 与注册表的 promote 一致 1ms
+ ✓ test/schemas-semantics.test.ts > 提升必填进了每类型的 JSON Schema > wiki.site:required 与注册表的 promote 一致 2ms
+ ✓ test/schemas-semantics.test.ts > 提升必填进了每类型的 JSON Schema > wiki.event:required 与注册表的 promote 一致 0ms
+ ✓ test/schemas-semantics.test.ts > 提升必填进了每类型的 JSON Schema > wiki.guide:required 与注册表的 promote 一致 0ms
+ ✓ test/schemas-semantics.test.ts > 提升必填进了每类型的 JSON Schema > docs.page:required 与注册表的 promote 一致 0ms
+ ✓ test/schemas-semantics.test.ts > 提升必填进了每类型的 JSON Schema > docs.api:required 与注册表的 promote 一致 0ms
+ ✓ test/schemas-semantics.test.ts > 提升必填进了每类型的 JSON Schema > blog.post 的 Schema 拒绝缺 authors、缺 seo、缺 seo.ogImage,其他类型不拒绝 1ms
+ ✓ test/schemas-semantics.test.ts > JSON Schema 表达不了的规则只由 Zod 判定 > workflow 时间倒退:Zod 拒绝 0ms
+ ✓ test/schemas-semantics.test.ts > JSON Schema 表达不了的规则只由 Zod 判定 > workflow 末项 stage 与顶层不符:Zod 拒绝 0ms
+ ✓ test/schemas-semantics.test.ts > JSON Schema 表达不了的规则只由 Zod 判定 > 日历上不存在的日期:Zod 拒绝 1ms
+ ✓ test/schemas-semantics.test.ts > JSON Schema 表达不了的规则只由 Zod 判定 > wiki.event 的 endDate 早于 startDate:Zod 拒绝 0ms
+ ✓ test/schemas-semantics.test.ts > JSON Schema 表达不了的规则只由 Zod 判定 > docs.api 的 spec 不在 site.specs:Zod 拒绝 0ms
+ ✓ test/schemas-semantics.test.ts > JSON Schema 表达不了的规则只由 Zod 判定 > 词表:缺 defaultLocale 的标签:Zod 拒绝 0ms
+ ✓ test/schemas-semantics.test.ts > JSON Schema 表达不了的规则只由 Zod 判定 > 重定向:from 含路径穿越:Zod 拒绝 0ms
+ ✓ test/schemas-semantics.test.ts > JSON Schema 表达不了的规则只由 Zod 判定 > 重定向:语言不在 site.locales:Zod 拒绝 0ms
+
+ Test Files  1 passed (1)
+      Tests  88 passed (88)
+   Start at  13:36:04
+   Duration  951ms (import 73%, tests 21%, transform 6%, worker 1%)
+
+
+--- end ---
+exit: 0
+finished: 2026-11-19T13:36:05+09:00
+bytes: 11165

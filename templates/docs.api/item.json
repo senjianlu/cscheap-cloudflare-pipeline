@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "type": "docs.api",
+  "id": "example-operation",
+  "slug": "example-operation",
+  "stage": "draft",
+  "workflow": [
+    {
+      "stage": "draft",
+      "by": "author",
+      "at": "2026-01-01T00:00:00Z",
+      "note": "Created from template."
+    }
+  ],
+  "data": {
+    "spec": "public-api",
+    "operationId": "exampleOperation"
+  }
+}

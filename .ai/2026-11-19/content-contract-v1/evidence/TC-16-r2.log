@@ -1,0 +1,78 @@
+# rawf-evidence v1
+tc: TC-16
+label: r2
+cmd: bash scripts/smoke-consumer.sh
+cwd: /home/rabbir/Projects/cscheap-cloudflare-pipeline
+git_head: de3914483cbf27cf9abec40c6651e45f2d19d34b dirty
+started: 2026-11-19T13:19:38+09:00
+--- output ---
+== 1. 构建 ==
+$ node -e "require('node:fs').rmSync('dist',{recursive:true,force:true})" && tsc contract/index.ts --outDir dist --rootDir contract --declaration --module nodenext --moduleResolution nodenext --target es2022 --lib es2023 --strict --noUncheckedIndexedAccess --rewriteRelativeImportExtensions --verbatimModuleSyntax --skipLibCheck
+== 2. 打包 ==
+包:cscheap-cloudflare-pipeline-0.0.0.tgz
+包内文件(不含测试与脚本):
+  package/dist/ast.d.ts
+  package/dist/ast.js
+  package/dist/envelope.d.ts
+  package/dist/envelope.js
+  package/dist/index.d.ts
+  package/dist/index.js
+  package/dist/inputs.d.ts
+  package/dist/inputs.js
+  package/dist/limits.d.ts
+  package/dist/limits.js
+  package/dist/primitives.d.ts
+  package/dist/primitives.js
+  package/dist/release.d.ts
+  package/dist/release.js
+  package/dist/site.d.ts
+  package/dist/site.js
+  package/dist/storage.d.ts
+  package/dist/storage.js
+  package/dist/types.d.ts
+  package/dist/types.js
+  package/migrations/0001_init.sql
+  package/package.json
+  package/README.md
+  package/schemas/blog.post.schema.json
+  package/schemas/docs.api.schema.json
+  package/schemas/docs.page.schema.json
+  package/schemas/frontmatter.schema.json
+  package/schemas/navigation.schema.json
+  package/schemas/redirects.schema.json
+  package/schemas/site.schema.json
+  package/schemas/taxonomy.schema.json
+  package/schemas/wiki.event.schema.json
+  package/schemas/wiki.guide.schema.json
+  package/schemas/wiki.site.schema.json
+  package/templates/blog.post/en.mdx
+  package/templates/blog.post/item.json
+  package/templates/docs.api/item.json
+  package/templates/docs.page/en.mdx
+  package/templates/docs.page/item.json
+  package/templates/wiki.event/en.mdx
+  package/templates/wiki.event/item.json
+  package/templates/wiki.guide/en.mdx
+  package/templates/wiki.guide/item.json
+  package/templates/wiki.site/en.mdx
+  package/templates/wiki.site/item.json
+== 3. 独立项目:离线安装 ==
+已离线安装:cscheap-cloudflare-pipeline typescript 
+== 4. 类型检查(skipLibCheck = false) ==
+类型检查通过
+== 5. 运行 ==
+ok   合法 item.json 通过
+ok   非法 item.json(缺 authors)被拒
+ok   错误指向 authors
+ok   未启用的类型被拒
+ok   AST 白名单生效
+ok   R2 路径函数可用
+ok   导入的值与类型一致
+ok   表常量可用
+运行时断言全部成立
+通过:全部断言成立
+
+--- end ---
+exit: 0
+finished: 2026-11-19T13:19:52+09:00
+bytes: 2362

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "type": "wiki.guide",
+  "id": "example-guide",
+  "slug": "example-guide",
+  "stage": "draft",
+  "workflow": [
+    {
+      "stage": "draft",
+      "by": "author",
+      "at": "2026-01-01T00:00:00Z",
+      "note": "Created from template."
+    }
+  ],
+  "tags": [
+    "example-tag"
+  ],
+  "data": {
+    "guideKind": "example-kind",
+    "difficulty": "beginner"
+  }
+}

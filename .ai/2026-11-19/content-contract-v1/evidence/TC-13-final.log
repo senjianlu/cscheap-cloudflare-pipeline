@@ -1,0 +1,68 @@
+# rawf-evidence v1
+tc: TC-13
+label: final
+cmd: pnpm exec vitest run test/limits.test.ts --reporter=verbose
+cwd: /home/rabbir/Projects/cscheap-cloudflare-pipeline
+git_head: de3914483cbf27cf9abec40c6651e45f2d19d34b dirty
+started: 2026-11-19T13:08:03+09:00
+--- output ---
+
+ RUN  v5.1.0 /home/rabbir/Projects/cscheap-cloudflare-pipeline
+
+ ✓ test/limits.test.ts > 体积上限的取值 > 每个 kind 的上限与方案一致 3ms
+ ✓ test/limits.test.ts > site > 上限内通过 1ms
+ ✓ test/limits.test.ts > site > 恰等于上限通过 2ms
+ ✓ test/limits.test.ts > site > 超 1 字节被拒 1ms
+ ✓ test/limits.test.ts > site > 多字节字符:字符数未超、字节数超,按字节判定被拒 1ms
+ ✓ test/limits.test.ts > site > 多字节字符:恰等于上限通过,再多一个字节被拒 1ms
+ ✓ test/limits.test.ts > site > 以空白撑大的原始文件被拒(解析后的内容很小) 1ms
+ ✓ test/limits.test.ts > item > 上限内通过 1ms
+ ✓ test/limits.test.ts > item > 恰等于上限通过 1ms
+ ✓ test/limits.test.ts > item > 超 1 字节被拒 1ms
+ ✓ test/limits.test.ts > item > 多字节字符:字符数未超、字节数超,按字节判定被拒 1ms
+ ✓ test/limits.test.ts > item > 多字节字符:恰等于上限通过,再多一个字节被拒 1ms
+ ✓ test/limits.test.ts > item > 以空白撑大的原始文件被拒(解析后的内容很小) 0ms
+ ✓ test/limits.test.ts > frontmatter > 上限内通过 0ms
+ ✓ test/limits.test.ts > frontmatter > 恰等于上限通过 0ms
+ ✓ test/limits.test.ts > frontmatter > 超 1 字节被拒 0ms
+ ✓ test/limits.test.ts > frontmatter > 多字节字符:字符数未超、字节数超,按字节判定被拒 0ms
+ ✓ test/limits.test.ts > frontmatter > 多字节字符:恰等于上限通过,再多一个字节被拒 0ms
+ ✓ test/limits.test.ts > frontmatter > 以空白撑大的原始文件被拒(解析后的内容很小) 0ms
+ ✓ test/limits.test.ts > taxonomy > 上限内通过 7ms
+ ✓ test/limits.test.ts > taxonomy > 恰等于上限通过 7ms
+ ✓ test/limits.test.ts > taxonomy > 超 1 字节被拒 8ms
+ ✓ test/limits.test.ts > taxonomy > 多字节字符:字符数未超、字节数超,按字节判定被拒 15ms
+ ✓ test/limits.test.ts > taxonomy > 多字节字符:恰等于上限通过,再多一个字节被拒 9ms
+ ✓ test/limits.test.ts > taxonomy > 以空白撑大的原始文件被拒(解析后的内容很小) 4ms
+ ✓ test/limits.test.ts > redirects > 上限内通过 11ms
+ ✓ test/limits.test.ts > redirects > 恰等于上限通过 7ms
+ ✓ test/limits.test.ts > redirects > 超 1 字节被拒 7ms
+ ✓ test/limits.test.ts > redirects > 多字节字符:字符数未超、字节数超,按字节判定被拒 19ms
+ ✓ test/limits.test.ts > redirects > 多字节字符:恰等于上限通过,再多一个字节被拒 10ms
+ ✓ test/limits.test.ts > redirects > 以空白撑大的原始文件被拒(解析后的内容很小) 4ms
+ ✓ test/limits.test.ts > navigation > 上限内通过 2ms
+ ✓ test/limits.test.ts > navigation > 恰等于上限通过 2ms
+ ✓ test/limits.test.ts > navigation > 超 1 字节被拒 2ms
+ ✓ test/limits.test.ts > navigation > 多字节字符:字符数未超、字节数超,按字节判定被拒 3ms
+ ✓ test/limits.test.ts > navigation > 多字节字符:恰等于上限通过,再多一个字节被拒 2ms
+ ✓ test/limits.test.ts > navigation > 以空白撑大的原始文件被拒(解析后的内容很小) 1ms
+ ✓ test/limits.test.ts > page > 上限内通过 2ms
+ ✓ test/limits.test.ts > page > 恰等于上限通过 2ms
+ ✓ test/limits.test.ts > page > 超 1 字节被拒 2ms
+ ✓ test/limits.test.ts > page > 多字节字符:字符数未超、字节数超,按字节判定被拒 3ms
+ ✓ test/limits.test.ts > page > 多字节字符:恰等于上限通过,再多一个字节被拒 2ms
+ ✓ test/limits.test.ts > page > 以空白撑大的原始文件被拒(解析后的内容很小) 1ms
+ ✓ test/limits.test.ts > 页对象按规范序列化后的字节数计量 > 恰等于上限通过,超 1 字节被拒 3ms
+ ✓ test/limits.test.ts > 页对象按规范序列化后的字节数计量 > 多字节正文按字节判定 1ms
+ ✓ test/limits.test.ts > 非法入参 > 未知类别与非法字节数抛错 0ms
+
+ Test Files  1 passed (1)
+      Tests  46 passed (46)
+   Start at  13:08:04
+   Duration  450ms (tests 50%, import 38%, transform 9%, worker 2%)
+
+
+--- end ---
+exit: 0
+finished: 2026-11-19T13:08:05+09:00
+bytes: 4118

@@ -1,0 +1,18 @@
+# rawf-evidence v1
+tc: TC-01
+label: 
+cmd: pnpm run check:static
+cwd: /home/rabbir/Projects/cscheap-cloudflare-pipeline
+git_head: de3914483cbf27cf9abec40c6651e45f2d19d34b dirty
+started: 2026-11-19T13:03:05+09:00
+--- output ---
+$ pnpm lint && pnpm typecheck
+$ eslint . && prettier --check "contract/**/*.ts" "scripts/**/*.ts" "test/**/*.ts" "*.{ts,mjs}" package.json tsconfig.json
+Checking formatting...
+All matched files use Prettier code style!
+$ tsc --noEmit -p tsconfig.json
+
+--- end ---
+exit: 0
+finished: 2026-11-19T13:03:22+09:00
+bytes: 251

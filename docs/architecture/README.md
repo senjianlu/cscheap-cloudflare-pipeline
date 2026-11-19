@@ -5,8 +5,10 @@
 | 文档 | 内容 |
 |---|---|
 | `README.md`(本文) | 目录地图 + 系统形态 |
-
-待随首个实现任务补齐(AGENTS.md「对外契约文档」要求):`overview.md`、`contract.md`、`publishing.md`、`usage.md`。
+| [`overview.md`](overview.md) | 定位、角色、契约的组成、一次发布的数据流 |
+| [`contract.md`](contract.md) | 契约全文:`site.json`、信封、类型注册表、正文 AST、D1 表、R2 路径、体积上限、版本演进;逐条标注出处 |
+| [`publishing.md`](publishing.md) | 发布契约:写序、就绪、激活、切换、回滚、失败语义(发布器尚未实现) |
+| [`usage.md`](usage.md) | 内容仓与读取端如何引用契约、`site.json` 示例(命令行与工作流尚未实现) |
 
 > `README.md` 始终只做汇总和导航,不要重新膨胀成单页大文档。
 
@@ -24,7 +26,12 @@
                                                      渲染端
 ```
 
-当前仓库只有工作流与文档骨架,契约与代码尚未实现。
+当前进度:
+
+| 部分 | 状态 |
+|---|---|
+| 内容契约 v1(`contract/`、`schemas/`、`migrations/`、`templates/`) | 已实现 |
+| 校验命令行、MDX 编译、发布 / 回滚 / 清理、可复用工作流 | 尚未实现 |
 
 ## 回写规则
 

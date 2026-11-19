@@ -39,3 +39,5 @@ CHANGELOG 1.3.0 及更早条目不回改,其中的 `docs/decisions/00NN` 即今
 ## 项目决策索引
 
 - [0001](0001-node-cli-contract-stack.md):定位为「契约库 + Node 命令行 + 可复用工作流」,裁剪模板栈
+- [0002](0002-envelope-and-type-registry.md):内容单元 = 公共信封 + 类型注册表;取值集合来自使用方配置
+- [0003](0003-versioned-d1-tables.md):D1 用「版本化的单表多类型 + 内容寻址正文 + 频道指针」,资源放 R2

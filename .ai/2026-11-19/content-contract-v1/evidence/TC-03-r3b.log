@@ -1,0 +1,79 @@
+# rawf-evidence v1
+tc: TC-03
+label: r3b
+cmd: pnpm exec vitest run test/types.test.ts --reporter=verbose
+cwd: /home/rabbir/Projects/cscheap-cloudflare-pipeline
+git_head: de3914483cbf27cf9abec40c6651e45f2d19d34b dirty
+started: 2026-11-19T13:35:51+09:00
+--- output ---
+
+ RUN  v5.1.0 /home/rabbir/Projects/cscheap-cloudflare-pipeline
+
+ ✓ test/types.test.ts > 类型:正反例 > blog.post 缺 authors 9ms
+ ✓ test/types.test.ts > 类型:正反例 > blog.post 的 authors 为空数组 2ms
+ ✓ test/types.test.ts > 类型:正反例 > blog.post 缺 seo 1ms
+ ✓ test/types.test.ts > 类型:正反例 > blog.post 缺 seo.ogImage 1ms
+ ✓ test/types.test.ts > 类型:正反例 > blog.post 带 authors 与 seo.ogImage 1ms
+ ✓ test/types.test.ts > 类型:正反例 > 其他类型不要求 authors 与 seo 3ms
+ ✓ test/types.test.ts > 类型:正反例 > wiki.event 缺 startDate 3ms
+ ✓ test/types.test.ts > 类型:正反例 > wiki.event 带 startDate 与可选字段 1ms
+ ✓ test/types.test.ts > 类型:正反例 > wiki.event 的 endDate 早于 startDate 1ms
+ ✓ test/types.test.ts > 类型:正反例 > wiki.site 的 url 为 javascript: 4ms
+ ✓ test/types.test.ts > 类型:正反例 > wiki.site 的 url 为 https 2ms
+ ✓ test/types.test.ts > 类型:正反例 > wiki.site 缺 code 1ms
+ ✓ test/types.test.ts > 类型:正反例 > wiki.site 的 data 含未知字段 1ms
+ ✓ test/types.test.ts > 类型:正反例 > 未注册的 type 0ms
+ ✓ test/types.test.ts > 类型:正反例 > 同步类型不能作为 item.json 的 type 0ms
+ ✓ test/types.test.ts > 类型:正反例 > docs.page 的 kind 不在取值内 2ms
+ ✓ test/types.test.ts > 类型:正反例 > docs.api 的 spec 指向 site.specs 中存在的键 1ms
+ ✓ test/types.test.ts > 类型:正反例 > docs.api 缺 spec 0ms
+ ✓ test/types.test.ts > 类型:正反例 > docs.api 缺 operationId 0ms
+ ✓ test/types.test.ts > 类型:正反例 > docs.api 的 spec 不在 site.specs 0ms
+ ✓ test/types.test.ts > 类型:正反例 > site.specs 的描述路径含 .. 1ms
+ ✓ test/types.test.ts > 类型:正反例 > site.specs 的描述路径为绝对路径 0ms
+ ✓ test/types.test.ts > 类型:正反例 > site.specs 的描述路径为仓内相对路径 0ms
+ ✓ test/types.test.ts > 注册表 > 登记了方案列出的类型、来源与正文模式 2ms
+ ✓ test/types.test.ts > 注册表 > 只有 blog.post 提升了必填字段 1ms
+ ✓ test/types.test.ts > 注册表 > 未启用的类型不能取 schema,也不被联合接受 1ms
+ ✓ test/types.test.ts > 静态类型与 schema 一致(由 tsc 判定) > 提升必填的字段在类型里也是必填 1ms
+ ✓ test/types.test.ts > 静态类型与 schema 一致(由 tsc 判定) > data 的类型随类型键变化 0ms
+ ✓ test/types.test.ts > 静态类型与 schema 一致(由 tsc 判定) > 解析结果在运行时与静态类型相符 10ms
+ ✓ test/types.test.ts > 各类型字段的同字段正反值 > wiki.site 的 url https://example.com/ → true 1ms
+ ✓ test/types.test.ts > 各类型字段的同字段正反值 > wiki.site 的 url http://example.com/path?q=1 → true 0ms
+ ✓ test/types.test.ts > 各类型字段的同字段正反值 > wiki.site 的 url javascript:alert(1) → false 1ms
+ ✓ test/types.test.ts > 各类型字段的同字段正反值 > wiki.site 的 url data:text/html,x → false 1ms
+ ✓ test/types.test.ts > 各类型字段的同字段正反值 > wiki.site 的 url //example.com/ → false 1ms
+ ✓ test/types.test.ts > 各类型字段的同字段正反值 > wiki.site 的 url https://user:secret@example.com/ → false 0ms
+ ✓ test/types.test.ts > 各类型字段的同字段正反值 > wiki.site 的 url /relative → false 1ms
+ ✓ test/types.test.ts > 各类型字段的同字段正反值 > wiki.event 的 startDate 2026-01-01 → true 0ms
+ ✓ test/types.test.ts > 各类型字段的同字段正反值 > wiki.event 的 startDate 2026-02-29 → false 0ms
+ ✓ test/types.test.ts > 各类型字段的同字段正反值 > wiki.event 的 startDate 2026-1-1 → false 1ms
+ ✓ test/types.test.ts > 各类型字段的同字段正反值 > wiki.event 的 startDate 2026-01-01T00:00:00Z → false 0ms
+ ✓ test/types.test.ts > 各类型字段的同字段正反值 > blog.post 的 heroImage:相对路径与白名单域名通过,穿越与非白名单域名被拒 2ms
+ ✓ test/types.test.ts > 全局引用 > blog.post:sample 合法 1ms
+ ✓ test/types.test.ts > 全局引用 > wiki.site:example-market 合法 0ms
+ ✓ test/types.test.ts > 全局引用 > docs.api:list_markets.v2 合法 0ms
+ ✓ test/types.test.ts > 全局引用 > item:skins/Example-Item_1 合法 0ms
+ ✓ test/types.test.ts > 全局引用 > item:skins/Example%20Item%7C1 合法 0ms
+ ✓ test/types.test.ts > 全局引用 > sample 非法 0ms
+ ✓ test/types.test.ts > 全局引用 > blog.video:sample 非法 0ms
+ ✓ test/types.test.ts > 全局引用 > blog.post: 非法 0ms
+ ✓ test/types.test.ts > 全局引用 > blog.post:Sample 非法 0ms
+ ✓ test/types.test.ts > 全局引用 > blog.post:../x 非法 0ms
+ ✓ test/types.test.ts > 全局引用 > item:Example 非法 0ms
+ ✓ test/types.test.ts > 全局引用 > item:skins/ 非法 0ms
+ ✓ test/types.test.ts > 全局引用 > item:skins/a b 非法 0ms
+ ✓ test/types.test.ts > 全局引用 > item:skins/a%2 非法 0ms
+ ✓ test/types.test.ts > 全局引用 >  blog.post:sample 非法 0ms
+ ✓ test/types.test.ts > 全局引用 > 拆分出类型与键 0ms
+
+ Test Files  1 passed (1)
+      Tests  57 passed (57)
+   Start at  13:35:52
+   Duration  517ms (import 48%, transform 32%, tests 19%, worker 2%)
+
+
+--- end ---
+exit: 0
+finished: 2026-11-19T13:35:52+09:00
+bytes: 5289

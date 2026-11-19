@@ -1,0 +1,48 @@
+# rawf-evidence v1
+tc: TC-14
+label: r2
+cmd: pnpm exec vitest run test/migration.test.ts --reporter=verbose
+cwd: /home/rabbir/Projects/cscheap-cloudflare-pipeline
+git_head: de3914483cbf27cf9abec40c6651e45f2d19d34b dirty
+started: 2026-11-19T13:19:24+09:00
+--- output ---
+
+ RUN  v5.1.0 /home/rabbir/Projects/cscheap-cloudflare-pipeline
+
+ ✓ test/migration.test.ts > 迁移:结构与契约常量一致 > 迁移成功,表集合与 TABLES 一致 29ms
+ ✓ test/migration.test.ts > 迁移:结构与契约常量一致 > releases:列与主键一致 24ms
+ ✓ test/migration.test.ts > 迁移:结构与契约常量一致 > channel_pointers:列与主键一致 21ms
+ ✓ test/migration.test.ts > 迁移:结构与契约常量一致 > objects:列与主键一致 23ms
+ ✓ test/migration.test.ts > 迁移:结构与契约常量一致 > entries:列与主键一致 25ms
+ ✓ test/migration.test.ts > 迁移:结构与契约常量一致 > entry_locales:列与主键一致 24ms
+ ✓ test/migration.test.ts > 迁移:结构与契约常量一致 > entry_tags:列与主键一致 24ms
+ ✓ test/migration.test.ts > 迁移:结构与契约常量一致 > links:列与主键一致 24ms
+ ✓ test/migration.test.ts > 迁移:结构与契约常量一致 > redirects:列与主键一致 29ms
+ ✓ test/migration.test.ts > 迁移:结构与契约常量一致 > release_assets:列与主键一致 22ms
+ ✓ test/migration.test.ts > 迁移:结构与契约常量一致 > taxonomy_terms:列与主键一致 25ms
+ ✓ test/migration.test.ts > 迁移:结构与契约常量一致 > nav:列与主键一致 22ms
+ ✓ test/migration.test.ts > 迁移:结构与契约常量一致 > 索引与 INDEXES 一致(名称、所属表、唯一性、列与排序方向) 247ms
+ ✓ test/migration.test.ts > 迁移:写入一版含全部映射字段的数据并读回 > releases:版本行与 site 快照逐字段相符 25ms
+ ✓ test/migration.test.ts > 迁移:写入一版含全部映射字段的数据并读回 > entries:type、id、slug、category、时间、noindex、meta(作者、来源、SEO、图标)、data 相符 22ms
+ ✓ test/migration.test.ts > 迁移:写入一版含全部映射字段的数据并读回 > entry_locales:title、description、summary、l10n、seo_title、image_alt、object_sha256 相符 24ms
+ ✓ test/migration.test.ts > 迁移:写入一版含全部映射字段的数据并读回 > l10n 与无正文的译文行可往返 113ms
+ ✓ test/migration.test.ts > 迁移:写入一版含全部映射字段的数据并读回 > entry_tags、links、redirects、taxonomy_terms、nav 相符 108ms
+ ✓ test/migration.test.ts > 迁移:写入一版含全部映射字段的数据并读回 > release_assets 与 objects:资源清单、正文对象相符 44ms
+ ✓ test/migration.test.ts > 迁移:写入一版含全部映射字段的数据并读回 > 约束:主键、唯一 slug、取值检查与外键生效 120ms
+ ✓ test/migration.test.ts > 迁移:发布时间规范化后,按文本排序即按时间排序 > 原样的写法按文本排序是错的(说明规范化的必要) 0ms
+ ✓ test/migration.test.ts > 迁移:发布时间规范化后,按文本排序即按时间排序 > 写入的列是定宽的规范写法,精度不丢 30ms
+ ✓ test/migration.test.ts > 迁移:发布时间规范化后,按文本排序即按时间排序 > 按 published_at 倒序的列表查询返回真实的时间顺序,且走索引 84ms
+ ✓ test/migration.test.ts > 迁移:发布时间规范化后,按文本排序即按时间排序 > updated_at 同样规范化;缺省的时间记为 NULL 2ms
+ ✓ test/migration.test.ts > 迁移:查询命中索引 > 按 (release_id, target_type, target_key) 的反向查询不出现全表扫描 20ms
+ ✓ test/migration.test.ts > 迁移:查询命中索引 > 按类型的时间倒序列表、按分类的列表、按 slug 取单页、按语言取译文都命中索引 84ms
+
+ Test Files  1 passed (1)
+      Tests  26 passed (26)
+   Start at  13:19:25
+   Duration  3.46s (tests 74%, import 20%, transform 5%)
+
+
+--- end ---
+exit: 0
+finished: 2026-11-19T13:19:29+09:00
+bytes: 3703

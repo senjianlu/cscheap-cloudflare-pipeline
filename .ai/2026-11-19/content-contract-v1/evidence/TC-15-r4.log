@@ -1,0 +1,47 @@
+# rawf-evidence v1
+tc: TC-15
+label: r4
+cmd: pnpm exec vitest run test/activation.test.ts --reporter=verbose
+cwd: /home/rabbir/Projects/cscheap-cloudflare-pipeline
+git_head: de3914483cbf27cf9abec40c6651e45f2d19d34b dirty
+started: 2026-11-19T14:01:47+09:00
+--- output ---
+
+ RUN  v5.1.0 /home/rabbir/Projects/cscheap-cloudflare-pipeline
+
+ ✓ test/activation.test.ts > 就绪(§4 第 3 步) > 行数与 expected 不符:不得变为 ready 1666ms
+ ✓ test/activation.test.ts > 就绪(§4 第 3 步) > 行数相符但某个 object_sha256 在 objects 中缺失:不得变为 ready 432ms
+ ✓ test/activation.test.ts > 就绪(§4 第 3 步) > 被引用的正文对象数与 expected.objects 不符:不得变为 ready 328ms
+ ✓ test/activation.test.ts > 就绪(§4 第 3 步) > assets_verified = 0:不得变为 ready 143ms
+ ✓ test/activation.test.ts > 就绪(§4 第 3 步) > 三项都满足:变为 ready;此后两条更新语句都不再生效 547ms
+ ✓ test/activation.test.ts > 就绪(§4 第 3 步) > 无正文的译文行(object_sha256 为空)不计入对象数,也不阻止就绪 314ms
+ ✓ test/activation.test.ts > 就绪(§4 第 3 步) > 不存在的版本:影响 0 行 41ms
+ ✓ test/activation.test.ts > 激活、切换与回滚(§4 第 4–7 步) > 空库首次激活:插入 1 行且 previous_release 为空 410ms
+ ✓ test/activation.test.ts > 激活、切换与回滚(§4 第 4–7 步) > 目标版本不存在:影响 0 行,不创建也不改变指针 396ms
+ ✓ test/activation.test.ts > 激活、切换与回滚(§4 第 4–7 步) > 目标为 writing:影响 0 行,指针三列不变 502ms
+ ✓ test/activation.test.ts > 激活、切换与回滚(§4 第 4–7 步) > 目标属于别的来源或频道:影响 0 行,指针三列不变 862ms
+ ✓ test/activation.test.ts > 激活、切换与回滚(§4 第 4–7 步) > 带错误旧值的切换:影响 0 行,指针三列不变 707ms
+ ✓ test/activation.test.ts > 激活、切换与回滚(§4 第 4–7 步) > 正确切换:影响 1 行并正确移动 previous_release 703ms
+ ✓ test/activation.test.ts > 激活、切换与回滚(§4 第 4–7 步) > 对当前版本重复激活:幂等成功,current、previous、activated_at 均不变 478ms
+ ✓ test/activation.test.ts > 激活、切换与回滚(§4 第 4–7 步) > 回滚到上一版后重复回滚:幂等成功,指针三列不变 600ms
+ ✓ test/activation.test.ts > 激活、切换与回滚(§4 第 4–7 步) > 回滚目标必须仍为 ready 且同来源同频道 647ms
+ ✓ test/activation.test.ts > 激活、切换与回滚(§4 第 4–7 步) > 不同频道的指针互不影响 443ms
+ ✓ test/activation.test.ts > 结果判定 > 影响 1 行、指针 {"current_release":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"} → activated 0ms
+ ✓ test/activation.test.ts > 结果判定 > 影响 0 行、指针 {"current_release":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"} → already-current 0ms
+ ✓ test/activation.test.ts > 结果判定 > 影响 0 行、指针 {"current_release":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"} → rejected 0ms
+ ✓ test/activation.test.ts > 结果判定 > 影响 0 行、指针 null → rejected 0ms
+ ✓ test/activation.test.ts > 结果判定 > 影响 0 行、指针 undefined → rejected 0ms
+ ✓ test/activation.test.ts > 结果判定 > 影响 1 行、指针 {"current_release":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"} → rejected 0ms
+ ✓ test/activation.test.ts > 结果判定 > 影响 2 行、指针 {"current_release":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"} → rejected 0ms
+ ✓ test/activation.test.ts > 结果判定 > 目标不是合法的版本标识时一律拒绝 0ms
+
+ Test Files  1 passed (1)
+      Tests  25 passed (25)
+   Start at  14:01:48
+   Duration  11.13s (tests 90%, import 9%, transform 1%)
+
+
+--- end ---
+exit: 0
+finished: 2026-11-19T14:02:00+09:00
+bytes: 3617

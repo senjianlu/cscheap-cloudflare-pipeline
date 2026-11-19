@@ -1,0 +1,55 @@
+# rawf-evidence v1
+tc: TC-07
+label: 
+cmd: pnpm exec vitest run test/site.test.ts --reporter=verbose
+cwd: /home/rabbir/Projects/cscheap-cloudflare-pipeline
+git_head: de3914483cbf27cf9abec40c6651e45f2d19d34b dirty
+started: 2026-11-19T13:03:31+09:00
+--- output ---
+
+ RUN  v5.1.0 /home/rabbir/Projects/cscheap-cloudflare-pipeline
+
+ ✓ test/site.test.ts > site.json:合法配置 > 示例配置通过;assetHosts 与 specs 可缺省 4ms
+ ✓ test/site.test.ts > site.json:合法配置 > 自定义频道名与准入 stage 10ms
+ ✓ test/site.test.ts > site.json:合法配置 > 只启用部分类型时,未启用的类型被拒 14ms
+ ✓ test/site.test.ts > site.json:合法配置 > 快照只含渲染相关子集 13ms
+ ✓ test/site.test.ts > site.json:合法配置 > 按 urlPattern 生成站内路径 1ms
+ ✓ test/site.test.ts > site.json:非法配置 > defaultLocale 不在 locales 被拒 3ms
+ ✓ test/site.test.ts > site.json:非法配置 > 频道为空 被拒 1ms
+ ✓ test/site.test.ts > site.json:非法配置 > 频道的 stage 列表为空 被拒 1ms
+ ✓ test/site.test.ts > site.json:非法配置 > 频道含未知 stage 被拒 1ms
+ ✓ test/site.test.ts > site.json:非法配置 > 频道名非法 被拒 1ms
+ ✓ test/site.test.ts > site.json:非法配置 > types 含未注册类型 被拒 1ms
+ ✓ test/site.test.ts > site.json:非法配置 > types 含 sync 类型 被拒 1ms
+ ✓ test/site.test.ts > site.json:非法配置 > types 为空 被拒 1ms
+ ✓ test/site.test.ts > site.json:非法配置 > urlPattern 不含 slug 或 id 被拒 1ms
+ ✓ test/site.test.ts > site.json:非法配置 > urlPattern 含未知占位符 被拒 1ms
+ ✓ test/site.test.ts > site.json:非法配置 > assetHosts 含 URL 被拒 1ms
+ ✓ test/site.test.ts > site.json:非法配置 > assetHosts 含路径 被拒 1ms
+ ✓ test/site.test.ts > site.json:非法配置 > assetHosts 含单段主机名 被拒 1ms
+ ✓ test/site.test.ts > site.json:非法配置 > assetHosts 含通配符 被拒 0ms
+ ✓ test/site.test.ts > site.json:非法配置 > specs 的路径为绝对路径 被拒 0ms
+ ✓ test/site.test.ts > site.json:非法配置 > specs 的路径含 .. 被拒 0ms
+ ✓ test/site.test.ts > site.json:非法配置 > specs 的语言不在 locales 被拒 0ms
+ ✓ test/site.test.ts > site.json:非法配置 > locales 为空 被拒 1ms
+ ✓ test/site.test.ts > site.json:非法配置 > locales 重复 被拒 1ms
+ ✓ test/site.test.ts > site.json:非法配置 > locales 含非法标签 被拒 1ms
+ ✓ test/site.test.ts > site.json:非法配置 > actors 为空 被拒 1ms
+ ✓ test/site.test.ts > site.json:非法配置 > source 含大写 被拒 1ms
+ ✓ test/site.test.ts > site.json:非法配置 > 未知顶层字段 被拒 6ms
+ ✓ test/site.test.ts > site.json:非法配置 > createContract 抛出的错误带原因码与逐条问题 1ms
+ ✓ test/site.test.ts > createContract(site):取值来自配置 > by 不在 actors 被拒;在 actors 内通过 11ms
+ ✓ test/site.test.ts > createContract(site):取值来自配置 > 语言不在 locales 被拒 3ms
+ ✓ test/site.test.ts > createContract(site):取值来自配置 > 同一份正文在 defaultLocale 下按主稿规则、在其他语言下按译文规则校验 12ms
+ ✓ test/site.test.ts > createContract(site):取值来自配置 > docs.api 的 spec 取值来自 site.specs 16ms
+
+ Test Files  1 passed (1)
+      Tests  33 passed (33)
+   Start at  13:03:32
+   Duration  448ms (import 46%, tests 37%, transform 15%, worker 2%)
+
+
+--- end ---
+exit: 0
+finished: 2026-11-19T13:03:32+09:00
+bytes: 3205

@@ -1,0 +1,44 @@
+# rawf-evidence v1
+tc: TC-08
+label: final
+cmd: pnpm exec vitest run test/inputs.test.ts --reporter=verbose
+cwd: /home/rabbir/Projects/cscheap-cloudflare-pipeline
+git_head: de3914483cbf27cf9abec40c6651e45f2d19d34b dirty
+started: 2026-11-19T13:07:56+09:00
+--- output ---
+
+ RUN  v5.1.0 /home/rabbir/Projects/cscheap-cloudflare-pipeline
+
+ ✓ test/inputs.test.ts > 仓级输入:正反例 > 词表:authors(项可带 url) 6ms
+ ✓ test/inputs.test.ts > 仓级输入:正反例 > 词表:tags 1ms
+ ✓ test/inputs.test.ts > 仓级输入:正反例 > 词表:缺 defaultLocale 的标签 2ms
+ ✓ test/inputs.test.ts > 仓级输入:正反例 > 词表:标签为空对象 1ms
+ ✓ test/inputs.test.ts > 仓级输入:正反例 > 词表:未知 vocabulary 1ms
+ ✓ test/inputs.test.ts > 仓级输入:正反例 > 词表:非 authors 的项不得带 url 1ms
+ ✓ test/inputs.test.ts > 仓级输入:正反例 > 词表:标签的语言标签不合法 1ms
+ ✓ test/inputs.test.ts > 仓级输入:正反例 > 重定向:合法 2ms
+ ✓ test/inputs.test.ts > 仓级输入:正反例 > 重定向:非法状态码 1ms
+ ✓ test/inputs.test.ts > 仓级输入:正反例 > 重定向:from 不是站内路径 1ms
+ ✓ test/inputs.test.ts > 仓级输入:正反例 > 重定向:to 为协议相对地址 1ms
+ ✓ test/inputs.test.ts > 仓级输入:正反例 > 重定向:from 含路径穿越 1ms
+ ✓ test/inputs.test.ts > 仓级输入:正反例 > 重定向:语言不在 site.locales 1ms
+ ✓ test/inputs.test.ts > 仓级输入:正反例 > 导航:分组带四种图标形态 3ms
+ ✓ test/inputs.test.ts > 仓级输入:正反例 > 导航:pages 不是全局引用格式 1ms
+ ✓ test/inputs.test.ts > 仓级输入:正反例 > 导航:pages 的类型未登记 1ms
+ ✓ test/inputs.test.ts > 仓级输入:正反例 > 导航:缺 title 1ms
+ ✓ test/inputs.test.ts > 仓级输入:附加规则 > 重定向不得指向自身,同一语言下 from 不得重复 1ms
+ ✓ test/inputs.test.ts > 仓级输入:附加规则 > 导航分组的图标沿用信封图标的规则 1ms
+ ✓ test/inputs.test.ts > 仓级输入 → 发布行 > 词表项映射为 taxonomy_terms 行 1ms
+ ✓ test/inputs.test.ts > 仓级输入 → 发布行 > locale 缺省的重定向对全部语言生效 1ms
+ ✓ test/inputs.test.ts > 仓级输入 → 发布行 > 导航按语言各出一行,标题缺译文时回退到 defaultLocale 1ms
+
+ Test Files  1 passed (1)
+      Tests  22 passed (22)
+   Start at  13:07:57
+   Duration  359ms (import 65%, transform 18%, tests 14%, worker 3%)
+
+
+--- end ---
+exit: 0
+finished: 2026-11-19T13:07:58+09:00
+bytes: 2234
